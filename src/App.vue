@@ -13,9 +13,10 @@
     <v-app-bar app color="#008000" dark v-if="!loggedIn">
       <v-container>
         <v-row align="center" justify="space-between">
-          <v-col>
+          <v-col class="nav-container">
             <router-link to="/login" class="nav-link">Login</router-link>
             <router-link to="/register" class="nav-link">Registrieren</router-link>
+            <p class="version">Version 0 - Basic</p>
           </v-col>
         </v-row>
       </v-container>

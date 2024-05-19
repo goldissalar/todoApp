@@ -62,6 +62,15 @@ fill-height {
     color: #3d3737;
 }
 
+.nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.version {
+    margin-left: auto; /* Schiebt das Element ganz nach rechts */
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
