@@ -21,8 +21,8 @@
     >
       <template v-slot:item="{ item }">
         <tr :class="{ 'green-row': item.checked }">
-          <td>{{ item.title }}</td>
-          <td>{{ item.description }}</td>
+          <td class="text-wrapper">{{ item.title }}</td>
+          <td class="text-wrapper">{{ item.description }}</td>
           <td>{{ item.dueDateDisplay }}</td>
           <td>
             <v-icon

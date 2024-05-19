@@ -67,8 +67,15 @@ fill-height {
     align-items: center;
 }
 
+.text-wrapper {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 150px;
+}
+
 .version {
-    margin-left: auto; /* Schiebt das Element ganz nach rechts */
+    margin-left: auto;
 }
 
 table {
@@ -134,8 +141,9 @@ v-list-item-content span div{
         display: block;
         line-height: 48px;
         text-overflow: ellipsis;
-        white-space: nowrap;
+        white-space: normal;
         overflow: hidden;
+        max-width: none;
     }
 
     .v-data-table td::before {
