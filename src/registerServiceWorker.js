@@ -1,8 +1,28 @@
 /* eslint-disable no-console */
-
 import { register } from 'register-service-worker'
+/*const SW_VERSION = 1;
+const CACHE_NAME = `pwa-cache-v${SW_VERSION}`;
+const urlList = [
+    '/',
+    '/index.html',
+    '/css/styles.css',
+    '/js/app.js'
+];
 
-//if (process.env.NODE_ENV === 'production') {
+self.addEventListener('install', event => {
+    console.log('install - Service Worker installing.');
+    event.waitUntil(
+        caches.open(CACHE_NAME)
+            .then(cache => {
+                console.log('SW: Cache opened');
+                return cache.addAll(urlList);
+            })
+            .catch(error => {
+                console.error(error);
+            })
+    );
+});*/
+if (process.env.NODE_ENV === 'production') {
 register(`${process.env.BASE_URL}service-worker.js`, {
     ready () {
         console.log(
@@ -29,4 +49,4 @@ register(`${process.env.BASE_URL}service-worker.js`, {
         console.error('Error during service worker registration:', error)
     }
 })
-//}
+}

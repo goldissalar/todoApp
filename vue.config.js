@@ -1,5 +1,5 @@
 const { defineConfig } = require('@vue/cli-service')
-module.exports = defineConfig({
+/*module.exports = defineConfig({
   transpileDependencies: true,
   publicPath: process.env.NODE_ENV === "production" ? "/todoApp/" : "/",
   pluginOptions: {
@@ -7,4 +7,13 @@ module.exports = defineConfig({
 			// https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader
 		}
   }
+})*/
+
+module.exports = defineConfig({
+    transpileDependencies: true,
+    pluginOptions: {
+        vuetify: {
+            // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader
+        }
+    }
 })
