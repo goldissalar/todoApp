@@ -15,5 +15,21 @@ module.exports = defineConfig({
         vuetify: {
             // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader
         }
-    }
+    },
+    /*pwa: {
+        workboxOptions: {
+            runtimeCaching: [
+                {
+                    urlPattern: new RegExp('https://65c7a2b5e7c384aada6ec54f.mockapi.io/todos'),
+                    handler: "CacheFirst",
+                    options: {
+                        cacheName: 'todos-cached',
+                        expiration: {
+                            maxAgeSeconds: 7 * 24 * 60 * 60 // 1 week
+                        },
+                    }
+                }
+            ]
+        }
+    }*/
 })

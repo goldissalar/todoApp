@@ -160,3 +160,8 @@ v-list-item-content span div{
         border-top: 2px solid #808080;
     }
 }
+
+.nav-icon {
+    width: 32px;
+    height: 32px;
+}
