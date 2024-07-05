@@ -17,7 +17,6 @@
             <img src="/img/icons/check-big.png" alt="Logo" class="nav-icon" style="margin-right: 10px;" />
             <router-link to="/login" class="nav-link">Login</router-link>
             <router-link to="/register" class="nav-link">Registrieren</router-link>
-            <p class="version">Version 0 - Basic</p>
           </v-col>
         </v-row>
       </v-container>

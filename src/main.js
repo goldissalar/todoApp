@@ -12,7 +12,7 @@ import { aliases, mdi } from "vuetify/lib/iconsets/mdi";
 import "@mdi/font/css/materialdesignicons.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import store from './auth/store';
-import './registerServiceWorker'
+//import './registerServiceWorker'
 
 const vuetify = createVuetify({
   icons: {
@@ -33,3 +33,13 @@ app.use(router);
 app.use(store);
 app.config.globalProperties.$axios = axios;
 app.mount('#app');
+
+/*if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js').then(registration => {
+      console.log('SW registered: ', registration);
+    }).catch(registrationError => {
+      console.log('SW registration failed: ', registrationError);
+    });
+  });
+}*/

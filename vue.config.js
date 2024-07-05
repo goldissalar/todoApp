@@ -1,4 +1,5 @@
 const { defineConfig } = require('@vue/cli-service')
+//const { InjectManifest } = require('workbox-webpack-plugin');
 /*module.exports = defineConfig({
   transpileDependencies: true,
   publicPath: process.env.NODE_ENV === "production" ? "/todoApp/" : "/",
@@ -16,6 +17,14 @@ module.exports = defineConfig({
             // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vuetify-loader
         }
     },
+    /*configureWebpack: {
+        plugins: [
+            new InjectManifest({
+                swSrc: './src/service-worker.js',
+                swDest: 'service-worker.js',
+            }),
+        ],
+    },*/
     /*pwa: {
         workboxOptions: {
             runtimeCaching: [
