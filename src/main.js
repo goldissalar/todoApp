@@ -34,7 +34,7 @@ app.use(store);
 app.config.globalProperties.$axios = axios;
 app.mount('#app');
 
-/*if ('serviceWorker' in navigator) {
+if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/service-worker.js').then(registration => {
       console.log('SW registered: ', registration);
@@ -42,4 +42,4 @@ app.mount('#app');
       console.log('SW registration failed: ', registrationError);
     });
   });
-}*/
+}
