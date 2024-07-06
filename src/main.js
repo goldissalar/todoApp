@@ -27,13 +27,6 @@ const vuetify = createVuetify({
   directives
 })
 
-const app = createApp(App);
-app.use(vuetify);
-app.use(router);
-app.use(store);
-app.config.globalProperties.$axios = axios;
-app.mount('#app');
-
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('/service-worker.js').then(registration => {
@@ -41,5 +34,29 @@ if ('serviceWorker' in navigator) {
     }).catch(registrationError => {
       console.log('SW registration failed: ', registrationError);
     });
+    showConnectivityStatus();
   });
 }
+
+function showConnectivityStatus() {
+
+  if (!navigator.onLine) {
+    console.log("You're currently offline.");
+  }
+
+  window.addEventListener("online", () => {
+    console.log("Your internet conection was restored.");
+  });
+
+  window.addEventListener("offline", () => {
+    console.log("You're currently offline.");
+  });
+}
+
+const app = createApp(App);
+app.use(vuetify);
+app.use(router);
+app.use(store);
+app.config.globalProperties.$axios = axios;
+app.mount('#app');
+
