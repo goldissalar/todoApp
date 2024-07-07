@@ -24,7 +24,11 @@ const vuetify = createVuetify({
       fa,
     },
   },*/
-  components,
+  components: {
+    vContainer: components.vContainer,
+    vRow: components.vRow,
+    vCol: components.vCol,
+  },
   directives
 })
 
