@@ -1,3 +1,4 @@
+//vue.config.js
 const { defineConfig } = require('@vue/cli-service')
 const { InjectManifest } = require('workbox-webpack-plugin');
 /*module.exports = defineConfig({
